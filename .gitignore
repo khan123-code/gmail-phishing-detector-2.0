@@ -1,0 +1,33 @@
+﻿# Secrets
+.env
+.env.*
+!.env.example
+
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Logs and temporary files
+*.log
+.pytest_cache/
+.mypy_cache/
+
+# Local IDE files
+.vscode/
+.idea/
+
+# Test environments
+.venv-test/
+.venv-*/
+
+# ML training artifacts
+backend/model/
+dataset/
+
+# Generated demo/output files
+brag-output-*/
+
+# Local backup files
+backend/summarizer_backup.py

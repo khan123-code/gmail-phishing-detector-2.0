@@ -1,0 +1,25 @@
+﻿{
+  "manifest_version": 3,
+  "name": "Gmail Phishing Detector",
+  "version": "1.0",
+  "description": "Detects phishing emails in Gmail using AI",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "http://127.0.0.1:8000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["https://mail.google.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon48.png"
+    }
+  }
+}
